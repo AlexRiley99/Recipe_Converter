@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Recipe Converter</string>
+
+    //main activity
+    <string name="img_descripton1">Baking Clipart</string>
+    <string name="add_ingredients">Add Ingredients</string>
+    <string name="ingredient">Ingredient:</string>
+    <string name="hint1">Ingredient Name</string>
+    <string name="quantity">Quantity:</string>
+    <string name="hint2">How Much?</string>
+    <string name="units">Units:</string>
+    <string-array name="unit_array">
+        <item>Teaspoon(s)</item>
+        <item>Tablespoon(s)</item>
+        <item>Cup(s)</item>
+    </string-array>
+    <string name="add_button">Add</string>
+    <string name="done_button">Done</string>
+    <string name="accept_button">Accept</string>
+
+    //calculation activity
+    <string name="img_description2">Calculator Clipart</string>
+    <string name="calculate_conversions">Calculate Conversions</string>
+    <string name="multiply_or_divide">Are you multiplying or dividing?</string>
+    <string name="multiply_radio">Multiplying</string>
+    <string name="divide_radio">Dividing</string>
+    <string name="how_many">By how many?</string>
+    <string name="hint3">Ex: 2</string>
+    <string name="calculate_button">Calculate</string>
+
+    //new list activity
+    <string name="img_description3">Cooking Clipart</string>
+    <string name="your_calculations">Your Calculations</string>
+    <string name="convert_another_button">Convert Another Recipe</string>
+</resources>
