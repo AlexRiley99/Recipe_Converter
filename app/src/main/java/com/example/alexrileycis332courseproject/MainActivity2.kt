@@ -19,12 +19,6 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
-        //add icon to action bar
-        val actionBar = supportActionBar
-        actionBar!!.setIcon(R.mipmap.ic_launcher_foreground)
-        actionBar.setDisplayUseLogoEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
-
         //get each element
         val ingredient = findViewById<EditText>(R.id.txtIngredient)
         val quantity = findViewById<EditText>(R.id.numQuantity)

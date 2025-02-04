@@ -4,48 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D1F0F4"
+    android:background="@drawable/bg1"
     tools:context=".MainActivity2">
-
-    <ImageView
-        android:id="@+id/bakingClipart"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginBottom="15dp"
-        android:contentDescription="@string/img_descripton1"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/addIngredients"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_baking_clipart" />
 
     <TextView
         android:id="@+id/addIngredients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="150dp"
         android:fontFamily="cursive"
         android:text="@string/add_ingredients"
         android:textAlignment="center"
+        android:textColor="#381f06"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ingredient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bakingClipart" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ingredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="serif"
         android:text="@string/ingredient"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/quantity"
+        app:layout_constraintEnd_toStartOf="@+id/txtIngredient"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addIngredients" />
 
@@ -53,30 +43,38 @@
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="51dp"
         android:fontFamily="serif"
         android:text="@string/quantity"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/ingredient"
-        app:layout_constraintTop_toBottomOf="@+id/ingredient" />
+        app:layout_constraintBottom_toTopOf="@+id/units"
+        app:layout_constraintEnd_toEndOf="@+id/units"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredient"
+        app:layout_constraintVertical_bias="0.381" />
 
     <TextView
         android:id="@+id/units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="122dp"
         android:fontFamily="serif"
         android:text="@string/units"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/quantity"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientList"
+        app:layout_constraintEnd_toStartOf="@+id/unitSpinner"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
     <EditText
         android:id="@+id/txtIngredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="14dp"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="@string/hint1"
@@ -86,13 +84,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/ingredient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ingredient" />
+        app:layout_constraintStart_toEndOf="@+id/ingredient"
+        app:layout_constraintTop_toTopOf="@+id/ingredient"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/numQuantity"
         android:layout_width="142dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="92dp"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="@string/hint2"
@@ -101,28 +102,36 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quantity"
         app:layout_constraintStart_toStartOf="@+id/txtIngredient"
-        app:layout_constraintTop_toTopOf="@+id/quantity" />
+        app:layout_constraintTop_toTopOf="@+id/quantity"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/unitSpinner"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="77dp"
         android:entries="@array/unit_array"
         app:layout_constraintBottom_toBottomOf="@+id/units"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/units"
         app:layout_constraintStart_toStartOf="@+id/numQuantity"
-        app:layout_constraintTop_toTopOf="@+id/units" />
+        app:layout_constraintTop_toTopOf="@+id/units"
+        app:layout_constraintVertical_bias="0.38" />
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="#3F51B5"
-        android:fontFamily="serif"
+        android:backgroundTint="#010737"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/add_button"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientList"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,27 +141,35 @@
         android:id="@+id/ingredientList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#7BFFFFFF"
         android:ellipsize="end"
         android:maxLines="10"
         android:scrollHorizontally="false"
         android:textAlignment="center"
+        android:textColor="#010737"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addButton"
         app:layout_constraintVertical_bias="0.123"
-        tools:layout_editor_absoluteX="0dp" />
+        android:padding="10dp"/>
 
     <Button
         android:id="@+id/doneButton"
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
-        android:backgroundTint="#3F51B5"
-        android:fontFamily="serif"
+        android:backgroundTint="#010737"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/done_button"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

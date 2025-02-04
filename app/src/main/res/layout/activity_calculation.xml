@@ -4,43 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D1F0F4"
+    android:background="@drawable/bg1"
     tools:context=".CalculationActivity">
 
     <TextView
         android:id="@+id/calculateConversions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="cursive"
         android:text="@string/calculate_conversions"
         android:textAlignment="center"
+        android:textColor="#381f06"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/multiplyOrDivide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_calculator_clipart"
-        tools:layout_editor_absoluteY="38dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/multiplyOrDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="14dp"
         android:fontFamily="serif"
         android:text="@string/multiply_or_divide"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/multiplyDivideGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +72,9 @@
         android:text="@string/how_many"
         android:textAlignment="center"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/howManyNum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiplyDivideGroup" />
 
@@ -87,7 +82,8 @@
         android:id="@+id/howManyNum"
         android:layout_width="159dp"
         android:layout_height="48dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="61dp"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="@string/hint3"
@@ -95,22 +91,25 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calculateButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/howMany" />
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
+        android:layout_width="144dp"
+        android:layout_height="50dp"
         android:layout_marginTop="60dp"
-        android:backgroundTint="#3F51B5"
-        android:fontFamily="serif"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#010737"
+        android:fontFamily="sans-serif-condensed"
         android:text="@string/calculate_button"
+        android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/howManyNum" />
 

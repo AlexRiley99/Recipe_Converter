@@ -18,12 +18,6 @@ class CalculationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculation)
 
-        //add icon to action bar
-        val actionBar = supportActionBar
-        actionBar!!.setIcon(R.mipmap.ic_launcher_foreground)
-        actionBar.setDisplayUseLogoEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
-
         //get elements
         val multiplyRadio = findViewById<RadioButton>(R.id.multiplyRadio)
         val divideRadio = findViewById<RadioButton>(R.id.divideRadio)

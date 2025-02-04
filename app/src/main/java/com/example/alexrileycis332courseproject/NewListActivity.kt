@@ -15,12 +15,6 @@ class NewListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_list)
 
-        //add icon to action bar
-        val actionBar = supportActionBar
-        actionBar!!.setIcon(R.mipmap.ic_launcher_foreground)
-        actionBar.setDisplayUseLogoEnabled(true)
-        actionBar.setDisplayShowHomeEnabled(true)
-
         //get elements
         val newList = findViewById<TextView>(R.id.newList)
         val anotherButton = findViewById<Button>(R.id.convertAnother)
